@@ -1,10 +1,13 @@
-const removeFromArray = function(arrayInput, elementTarget) {
-    for (element in arrayInput) {
-        if (element == elementTarget) {
-            arrayInput.slice(arrayInput.indexOf(element), 1);
+const removeFromArray = function(arrayInput, ...elementTargets) {
+    let arrayOutput = [];
+    for (const elementArg of elementTargets) {
+        for (const currentElement of arrayInput) {
+            if (currentElement != elementArg) {
+                arrayOutput.push(currentElement);
+            }
         }
     }
-    return arrayInput;
+    return arrayOutput;
 };
 
 // Do not edit below this line
