@@ -1,9 +1,11 @@
 const removeFromArray = function(arrayInput, ...elementTargets) {
-    let arrayOutput = [];
+    let arrayOutput = arrayInput;
     for (const elementArg of elementTargets) {
-        for (const currentElement of arrayInput) {
-            if (currentElement != elementArg) {
-                arrayOutput.push(currentElement);
+        for (let i = 0; i < arrayOutput.length;) {
+            if (arrayOutput[i] == elementArg && typeof arrayOutput[i] == typeof elementArg) {
+                arrayOutput.splice(i, 1);
+            } else {
+                i++;
             }
         }
     }
