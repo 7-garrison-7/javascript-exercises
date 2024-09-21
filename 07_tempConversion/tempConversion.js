@@ -4,8 +4,8 @@ const convertToCelsius = function(temp) {
   // (x - 32) * (5 / 9)
   let result = ((temp - 32) * (5 / 9));
 
-  result = number.toFixed(1);
-  return parseInt(result);
+  result = result.toFixed(1);
+  return parseFloat(result);
 
 };
 
@@ -13,10 +13,10 @@ const convertToFahrenheit = function(temp) {
 
   // Formula to Fahrenheit is:
   // (x * (9/5) + 32)
-  let result = (temp * (9 / 5 + 32));
+  let result = (temp * (9 / 5) + 32);
 
-  result = number.toFixed(1);
-  return parseInt(result);
+  result = result.toFixed(1);
+  return parseFloat(result);
 
 };
 
