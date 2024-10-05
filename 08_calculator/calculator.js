@@ -7,14 +7,11 @@ const subtract = function(a, b) {
 };
 
 const sum = function(array) {
-	return array.reduce(function (accum, current) {
-    return accum + current;
-  }, 0);
+	return array.reduce((accum, current) => accum + current, 0);
 };
 
-const multiply = function(...args) {
-  // const array = [...args];
-  // return array.reduce()
+const multiply = function(array) {
+  return array.reduce((accum, current) => accum * current);
 
 };
 
