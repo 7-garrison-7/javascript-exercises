@@ -15,11 +15,11 @@ const multiply = function(array) {
 
 };
 
-const power = function() {
-	
+const power = function(base, power) {
+	return base ** power;
 };
 
-const factorial = function() {
+const factorial = function(num) {
 	
 };
 
