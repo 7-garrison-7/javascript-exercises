@@ -1,14 +1,10 @@
 const removeFromArray = function(arrayInput, ...elementTargets) {
-    let arrayOutput = arrayInput;
-    for (const elementArg of elementTargets) {
-        for (let i = 0; i < arrayOutput.length;) {
-            if (arrayOutput[i] == elementArg && typeof arrayOutput[i] == typeof elementArg) {
-                arrayOutput.splice(i, 1);
-            } else {
-                i++;
-            }
+    let arrayOutput = [];
+    arrayInput.forEach((item) => {
+        if (!elementTargets.includes(item)) {
+            arrayOutput.push(item);
         }
-    }
+    })
     return arrayOutput;
 };
 
