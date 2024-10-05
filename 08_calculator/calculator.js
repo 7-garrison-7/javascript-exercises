@@ -20,7 +20,15 @@ const power = function(base, power) {
 };
 
 const factorial = function(num) {
-	
+  if (num == 0) {
+    return 1;
+  } else {
+    let factors = [];
+    for (let i = num; i > 0; i--) {
+      factors.push(i);
+    }
+    return factors.reduce((accum, current) => accum * current);
+  }
 };
 
 // Do not edit below this line
